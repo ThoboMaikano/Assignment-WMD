@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="media/logo1.png" alt="Logo" />
+      <span class="logo-text">Screen sync</span>
+    </div>
+    <div class="nav-toggle" id="nav-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="movies.html">Movies</a></li>
+      <li><a href="series.html">Series</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signin.html">SignIn</a></li>
+    </ul>
+  </nav>
+  
+  <script>
+    document.getElementById("nav-toggle").onclick = function () {
+      document.getElementById("nav-links").classList.toggle("active");
+    };
+  </script>
+  <div class="sign-in-container">
+    <div class="left-section">
+      <h2>Sign In</h2>
+      <button class="sign-in-button sign-in-phone-number">
+        <i class="fa-solid fa-phone"></i>Sign in with Phone Number
+      </button>
+      <button class="sign-in-button sign-in-amazon">
+        <i class="fa-brands fa-amazon"></i>Sign in with Amazon
+      </button>
+      <button class="sign-in-button sign-in-google">
+        <i class="fa-brands fa-google"></i>Sign in with Google
+      </button>
+      <button class="sign-in-button sign-in-apple">
+        <i class="fa-brands fa-apple"></i>Sign in with Apple
+      </button>
+      <button class="sign-in-button sign-in-facebook">
+        <i class="fa-brands fa-facebook"></i>Sign in with Facebook
+      </button>
+      <a href="#" class="password-section">Forgot Password?</a>
+      <div class="or-section">or</div>
+      <a href="#" class="create-account">Create a New Account</a>
+    </div>
+  </div>

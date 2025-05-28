@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Details</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+  /* Main movie detail section */
+  .movie-detail {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: #111;
+}
+
+.movie-container {
+  max-width: 1200px;
+  width: 100%;
+  background: #1c1c1c;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+/* Breadcrumb-like title bar */
+.title-cont {
+  font-size: 14px;
+  margin-bottom: 1rem;
+  color: #aaa;
+}
+
+.title-cont a {
+  color: #f00;
+  text-decoration: none;
+}
+
+.title-cont span {
+  color: #fff;
+}
+
+/* Movie player iframe */
+.movie-player {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+}
+
+.movie-player iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Movie metadata */
+.movie-meta h1 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.movie-meta p {
+  font-size: 16px;
+  color: #ccc;
+  margin: 0.5rem 0;
+}
+
+.movie-meta strong {
+  color: #fff;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .movie-container {
+    padding: 1rem;
+  }
+
+  .movie-player iframe {
+    height: 250px;
+  }
+
+  .movie-meta h1 {
+    font-size: 1.5rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="media/logo1.png" alt="Logo" />
+      <span class="logo-text">Screen sync</span>
+    </div>
+    <div class="nav-toggle" id="nav-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="movies.html">Movies</a></li>
+      <li><a href="series.html">Series</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signin.html">SignIn</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="movie-detail">
+      <div class="movie-container">
+        <div class="title-cont">
+            <a href="movies.html">movies</a> > <span id="movie-title1">Loading...</span>
+        </div>
+        
+        <div class="movie-meta">
+            <div class="movie-player">
+        <iframe id="movie-video" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
+      </div>
+          <h1 id="movie-title">Loading...</h1>
+          <p id="movie-description">Loading...</p>
+          <p><strong>Genres:</strong> <span id="movie-genre"></span></p>
+          <p><strong>Year:</strong> <span id="movie-year"></span></p>
+          <p><strong>Cast:</strong> <span id="movie-cast"></span></p>
+          <p><strong>Director:</strong> <span id="movie-director"></span></p>
+          <p><strong>Duration:</strong> <span id="movie-duration"></span></p>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+
+
+  <script>
+    // Load movie data from localStorage
+    const movie = JSON.parse(localStorage.getItem("selectedMovie"));
+
+    if (movie) {
+      // Update HTML with movie details
+      document.getElementById('movie-title1').textContent = movie.title;
+      document.getElementById('movie-title').textContent = movie.title;
+      document.getElementById('movie-description').textContent = movie.description;
+      document.getElementById('movie-genre').textContent = movie.genres.join(", ");
+      document.getElementById('movie-year').textContent = movie.year;
+      document.getElementById('movie-video').src = movie.videoUrl;
+      document.getElementById('movie-cast').textContent = movie.cast;
+      document.getElementById('movie-duration').textContent = movie.duration;
+      document.getElementById('movie-director').textContent = movie.director;
+    } else {
+      document.getElementById('movie-title').textContent = "Movie not found";
+    }
+  </script>
+  </body>
+</html>

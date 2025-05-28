@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Series Details</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Base reset and theme */
+
+
+/* Main movie detail section */
+.series-detail {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: #111;
+}
+
+.series-container {
+  max-width: 1200px;
+  width: 100%;
+  background: #1c1c1c;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+/* Breadcrumb-like title bar */
+.title-cont {
+  font-size: 14px;
+  margin-bottom: 1rem;
+  color: #aaa;
+}
+
+.title-cont a {
+  color: #f00;
+  text-decoration: none;
+}
+
+.title-cont span {
+  color: #fff;
+}
+
+/* Movie player iframe */
+.series-player {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+}
+
+.series-player iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Movie metadata */
+.series-meta h1 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.series-meta p {
+  font-size: 16px;
+  color: #ccc;
+  margin: 0.5rem 0;
+}
+
+.series-meta strong {
+  color: #fff;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .series-container {
+    padding: 1rem;
+  }
+
+  .series-player iframe {
+    height: 250px;
+  }
+
+  .series-meta h1 {
+    font-size: 1.5rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="media/logo1.png" alt="Logo" />
+      <span class="logo-text">Screen sync</span>
+    </div>
+    <div class="nav-toggle" id="nav-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="movies.html">Movies</a></li>
+      <li><a href="series.html">Series</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signin.html">SignIn</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <div class="series-detail">
+      <div class="series-container">
+        <div class="title-cont">
+            <a href="series.html">TV Series</a> > <span id="series-title1">Loading...</span>
+        </div>
+        
+        <div class="series-meta">
+            <div class="series-player">
+        <iframe id="series-video" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
+      </div>
+          <h1 id="series-title">Loading...</h1>
+          <p id="series-description">Loading...</p>
+          <p><strong>Genres:</strong> <span id="series-genre"></span></p>
+          <p><strong>Year:</strong> <span id="series-year"></span></p>
+          <p><strong>Seasons:</strong> <span id="series-season"></span></p>
+          <p><strong>Cast:</strong> <span id="series-cast"></span></p>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+  
+  <script>
+    // Load series data from localStorage
+    const series = JSON.parse(localStorage.getItem("selectedSeries"));
+
+    if (series) {
+      // Update HTML with series details
+      document.getElementById('series-title1').textContent = series.title;
+      document.getElementById('series-title').textContent = series.title;
+      document.getElementById('series-description').textContent = series.description;
+      document.getElementById('series-genre').textContent = series.genres.join(", ");
+      document.getElementById('series-year').textContent = series.year;
+      document.getElementById('series-season').textContent = series.seasons;
+      document.getElementById('series-cast').textContent = series.cast;
+      document.getElementById('series-video').src = series.videoUrl;
+    } else {
+      document.getElementById('series-title').textContent = "Series not found";
+    }
+  </script>
+
+</body>
+</html>

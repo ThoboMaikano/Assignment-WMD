@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="media/logo1.png" alt="Logo" />
+      <span class="logo-text">Screen sync</span>
+    </div>
+    <div class="nav-toggle" id="nav-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="movies.html">Movies</a></li>
+      <li><a href="series.html">Series</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signin.html">SignIn</a></li>
+    </ul>
+  </nav>
+  
+  <script>
+    document.getElementById("nav-toggle").onclick = function () {
+      document.getElementById("nav-links").classList.toggle("active");
+    };
+  </script>
+<main>
+    <section class="hero-slider">
+        <div class="slides">
+          <div class="slide active">
+            <img src="images/thefallguy.jpg" alt="The fall guy">
+            <div class="caption">
+              <h1>The Fall Guy</h1>
+              <p class="rating">10/10</p>
+              <p>A down-and-out stuntman must find the missing star of his ex-girlfriend's blockbuster film.</p>
+              <div class="hero-buttons">
+                <button class="watch-now">Watch Now</button>
+                <button class="more-info">More Info</button>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/paddingtoninperu.jpg" alt="Paddington in Peru">
+            <div class="caption">
+              <h1>Paddington In Peru</h1>
+              <p class="rating">8/10</p>
+              <p>Paddington travels to Peru to visit his beloved Aunt Lucy, who now resides at the Home for Retired Bears. With the Brown Family in tow, a thrilling adventure ensues when a mystery plunges them into an unexpected journey through the Amazon rainforest and up to the mountain peaks of Peru.</p>
+              <div class="hero-buttons">
+                <button class="watch-now">Watch Now</button>
+                <button class="more-info">More Info</button>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="images/thewomanintheyard.jpg" alt="The Woman In The Yard">
+            <div class="caption">
+              <h1>The Woman In The Yard</h1>
+              <p class="rating">10/10</p>
+              <p>In the aftermath of her husband's death, widow Ramona's struggle to raise her two kids is hindered by the arrival of a mysterious woman with supernatural abilities.</p>
+              <div class="hero-buttons">
+                <button class="watch-now">Watch Now</button>
+                <button class="more-info">More Info</button>
+            </div>
+          </div>
+          <!-- Add more slides as needed -->
+        </div>
+      </section>
+
+      <section class="trending-section">
+        <h2>Trending Movies</h2>
+        <div class="trending-carousel">
+          <div class="trending-item">
+            <img src="images/havocc.jpg" alt="Havoc" class="movie-image">
+            <div class="movie-info">
+              <h3>Havoc</h3>
+              <p>When a drug heist swerves lethally out of control, a jaded cop fights his way through a corrupt city's criminal underworld to save a politician's son.</p>
+              <p><strong>Duration:</strong> 1h 43m</p>
+              <p><strong>Rating:</strong> 16+</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="trending-item">
+            <img src="images/captainamericabrandnewworld.jpg" alt="Captain America" class="movie-image">
+            <div class="movie-info">
+              <h3>Captain America: Brand New World</h3>
+              <p>After meeting with newly elected U.S. President Thaddeus Ross, Sam finds himself in the middle of an international incident. He must discover the reason behind a nefarious global plot before the true mastermind has the entire world seeing red.</p>
+              <p><strong>Duration:</strong> 1h 58m</p>
+              <p><strong>Rating:</strong> 16+</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="trending-item">
+            <img src="images/g20action.jpg" alt="G20" class="movie-image">
+            <div class="movie-info">
+              <h3>G20</h3>
+              <p>After the G20 Summit is overtaken by terrorists, President Danielle Sutton must bring all her statecraft and military experience to defend her family and her fellow leaders.</p>
+              <p><strong>Duration:</strong> 1h 48m</p>
+              <p><strong>Rating:</strong> 16+</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="trending-item">
+            <img src="images/ashhorror.jpg" alt="Ash" class="movie-image">
+            <div class="movie-info">
+              <h3>Ash</h3>
+              <p>A woman wakes up on a distant planet and finds the crew of her space station viciously killed. Her investigation into what happened sets in motion a terrifying chain of events.</p>
+              <p><strong>Duration:</strong> 1h 35m</p>
+              <p><strong>Rating:</strong> 18+</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="trending-item">
+            <img src="images/snowwhite.jpg" alt="SnowWhite" class="movie-image">
+            <div class="movie-info">
+              <h3>Snow White</h3>
+              <p>A princess joins forces with seven dwarfs and a group of rebels to liberate her kingdom from her cruel stepmother the Evil Queen.</p>
+              <p><strong>Duration:</strong> 1h 49m</p>
+              <p><strong>Rating:</strong> PG</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="trending-item">
+            <img src="images/deathofaunicorn.jpg" alt="Death of a Unicorn" class="movie-image">
+            <div class="movie-info">
+              <h3>Death Of A Unicorn</h3>
+              <p>A father and daughter accidentally hit and kill a unicorn while en route to a weekend retreat, where his billionaire boss seeks to exploit the creature’s miraculous curative properties.</p>
+              <p><strong>Duration:</strong> 1h 48m</p>
+              <p><strong>Rating:</strong> 16+</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="trending-item">
+            <img src="images/aworkingman.jpg" alt="A working man" class="movie-image">
+            <div class="movie-info">
+              <h3>A Working Man</h3>
+              <p>Levon Cade left his profession behind to work construction and be a good dad to his daughter. But when a local girl vanishes, he's asked to return to the skills that made him a mythic figure in the shadowy world of counter-terrorism.</p>
+              <p><strong>Duration:</strong> 1h 56m</p>
+              <p><strong>Rating:</strong> 16+</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="trending-item">
+            <img src="images/dropp.jpg" alt="Drop" class="movie-image">
+            <div class="movie-info">
+              <h3>Drop</h3>
+              <p>A widowed mother's first date in years takes a terrifying turn when she's bombarded with anonymous threatening messages on her phone during their upscale dinner, leaving her questioning if her charming date is behind the harassment.</p>
+              <p><strong>Duration:</strong> 1h 40m</p>
+              <p><strong>Rating:</strong> 13+</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="trending-item">
+            <img src="images/warfare.jpg" alt="Warfare" class="movie-image">
+            <div class="movie-info">
+              <h3>Warfare</h3>
+              <p>A platoon of Navy SEALs embarks on a dangerous mission in Ramadi, Iraq, with the chaos and brotherhood of war retold through their memories of the event.</p>
+              <p><strong>Duration:</strong> 1h 35m</p>
+              <p><strong>Rating:</strong> 16+</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <!-- Add more .upcoming-item as needed -->
+        </div>
+      </section>
+
+      <section class="upcoming-movies-section">
+        <h2>Upcoming Movies</h2>
+        <div class="upcoming-movies-carousel">
+          <div class="upcoming-movie-item">
+            <img src="images/balllerina.jpg" alt="Ballerina" class="movie-image">
+            <div class="movie-info">
+              <h3>From The World Of John Wick: Ballerina</h3>
+              <p>An assassin trained in the traditions of the Ruska Roma organization sets out to seek revenge after her father's death.</p>
+              <p><strong>Duration:</strong> 2h 5m</p>
+              <p><strong>Rating:</strong> 16+</p>
+              <p><strong>Release Date:</strong> 6 June 2025</p>
+            </div>
+          </div>
+          <div class="upcoming-movie-item">
+            <img src="images/weaponss.jpg" alt="Weapons" class="movie-image">
+            <div class="movie-info">
+              <h3>Weapons</h3>
+              <p>When all but one child from the same class mysteriously vanish on the same night at exactly the same time, a community is left questioning who or what is behind their disappearance.</p>
+              <p><strong>Duration:</strong> 2h 8m</p>
+              <p><strong>Rating:</strong> 16+</p>
+              <p><strong>Release Date:</strong> 8 August 2025</p>
+            </div>
+          </div>
+          <div class="upcoming-movie-item">
+            <img src="images/thefantasticfour.jpg" alt="The Fantastic Four: First Steps" class="movie-image">
+            <div class="movie-info">
+              <h3>The Fantastic Four: First Steps</h3>
+              <p>Forced to balance their roles as heroes with the strength of their family bond, the Fantastic Four must defend Earth from a ravenous space god called Galactus and his enigmatic Herald, Silver Surfer.</p>
+              <p><strong>Duration:</strong> 2h 20m</p>
+              <p><strong>Rating:</strong> 16+</p>
+              <p><strong>Release Date:</strong> 25 July 2025</p>
+            </div>
+          </div>
+          <div class="upcoming-movie-item">
+            <img src="images/avengerssecretwars.jpg" alt="Avengers: Secret Wars" class="movie-image">
+            <div class="movie-info">
+              <h3>Avengers: Secret Wars</h3>
+              <p>Plot Under Wraps.</p>
+              <p><strong>Duration:</strong> 3h 00m</p>
+              <p><strong>Rating:</strong> 16+</p>
+              <p><strong>Release Date:</strong> 17 December 2027</p>
+            </div>
+          </div>
+          <div class="upcoming-movie-item">
+            <img src="images/doomsday.jpg" alt="Avengers: Doomsday" class="movie-image">
+            <div class="movie-info">
+              <h3>Avengers: Doomsday</h3>
+              <p>Plot Under Wraps.</p>
+              <p><strong>Duration:</strong> 2h 50m</p>
+              <p><strong>Rating:</strong> 16+</p>
+              <p><strong>Release Date:</strong> 18 December 2026</p>
+            </div>
+          </div>
+          <div class="upcoming-movie-item">
+            <img src="images/tronares.jpg" alt="Tron: Ares" class="movie-image">
+             <div class="movie-info">
+              <h3>Tron: Ares</h3>
+              <p>A highly sophisticated Program, Ares, is sent from the digital world into the real world on a dangerous mission.</p>
+              <p><strong>Duration:</strong> 2h 5m</p>
+              <p><strong>Rating:</strong> 16+</p>
+              <p><strong>Release Date:</strong> 10 October 2025</p>
+            </div>
+          </div>
+          <div class="upcoming-movie-item">
+            <img src="images/avatarr.jpg" alt="Avatar: Fire and Ash" class="movie-image">
+            <div class="movie-info">
+              <h3>Avatar: Fire And Ash</h3>
+              <p>Jake and Neytiri's family grapples with grief after Neteyam's death, encountering a new, aggressive Na'vi tribe, the Ash People, who are led by the fiery Varang, as the conflict on Pandora escalates and a new moral focus emerges.</p>
+              <p><strong>Duration:</strong> 3h 12m</p>
+              <p><strong>Rating:</strong> 16+</p>
+              <p><strong>Release Date:</strong> 19 December 2025</p>
+            </div>
+          </div>
+          <div class="upcoming-movie-item">
+            <img src="images/28yearslater.jpg" alt="28 Years Later" class="movie-image">
+            <div class="movie-info">
+              <h3>28 Years Later</h3>
+              <p>A group of survivors of the rage virus lives on a small island. When one of the group leaves the island on a mission into the mainland, he discovers secrets, wonders, and horrors that have mutated not only the infected but other survivors.</p>
+              <p><strong>Duration:</strong> 2h 6m</p>
+              <p><strong>Rating:</strong> 16+</p>
+              <p><strong>Release Date:</strong> 20 June 2025</p>
+            </div>
+          </div>
+          <div class="upcoming-movie-item">
+            <img src="images/thebatmanpartII.jpg" alt="The Batman Part II" class="movie-image">
+            <div class="movie-info">
+              <h3>The Batman Part II</h3>
+              <p>Plot Under Wraps</p>
+              <p><strong>Duration:</strong> -</p>
+              <p><strong>Rating:</strong> 16+</p>
+              <p><strong>Release Date:</strong> 1 October 2027</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      <section class="popular-section">
+        <h2>Popular TV Series <a class="view-all" href="series.html">view all</a></h2>
+        <div class="popular-carousel">
+          <div class="popular-item">
+            <img src="images/allamerican.jpg" alt="All American" class="movie-image">
+            <div class="movie-info">
+              <h3>All American</h3>
+              <p>When a star high school football player from South Central is recruited to play for Beverly Hills High School, two separate worlds collide.</p>
+              <p><strong>Seasons:</strong> 7</p>
+              <p><strong>Genre:</strong> Sport</p>
+              <p><strong>Year:</strong> 2018</p>
+            </div>
+          </div>
+          <div class="popular-item">
+            <img src="images/found.jpg" alt="Found" class="movie-image">
+            <div class="movie-info">
+              <h3>Found</h3>
+              <p>Each year, over 600,000 people are reported missing in the U.S., but not all cases receive the proper attention. Gabi Mosely and her crisis management team make sure there is always someone looking out for the forgotten missing people.</p>
+              <p><strong>Seasons:</strong> 2</p>
+              <p><strong>Genre:</strong> Drama</p>
+              <p><strong>Year:</strong> 2023</p>
+            </div>
+          </div>
+          <div class="popular-item">
+            <img src="images/familyguy.jpg" alt="Family Guy" class="movie-image">
+            <div class="movie-info">
+              <h3>Family Guy</h3>
+              <p>In a wacky Rhode Island town, a dysfunctional family strive to cope with everyday life as they are thrown from one crazy scenario to another.</p>
+              <p><strong>Seasons:</strong> 23</p>
+              <p><strong>Genre:</strong> Animation, Comedy</p>
+              <p><strong>Year:</strong> 1999</p>
+            </div>
+          </div>
+          <div class="popular-item">
+            <img src="images/tracker.jpg" alt="Tracker" class="movie-image">
+            <div class="movie-info">
+              <h3>Tracker</h3>
+              <p>Colter Shaw travels the country in his old-school RV to help police and private citizens solve crimes and locate missing persons until his latest case changes everything.</p>
+              <p><strong>Seasons:</strong> 2</p>
+              <p><strong>Genre:</strong> Action, Drama</p>
+              <p><strong>Year:</strong> 2024</p>
+            </div>
+          </div>
+          <div class="popular-item">
+            <img src="images/thelastofus.jpg" alt="The Last Of Us" class="movie-image">
+            <div class="movie-info">
+              <h3>The Last Of Us</h3>
+              <p>Joel and Ellie, a pair connected through the harshness of the world they live in, are forced to endure brutal circumstances and ruthless killers on a trek across post-pandemic America.</p>
+              <p><strong>Seasons:</strong> 2</p>
+              <p><strong>Genre:</strong> Horror</p>
+              <p><strong>Year:</strong> 2023</p>
+            </div>
+          </div>
+          <div class="popular-item">
+            <img src="images/watson.jpg" alt="Watson" class="movie-image">
+            <div class="movie-info">
+              <h3>Watson</h3>
+              <p>A year after the death of his friend and partner Sherlock Holmes at the hands of Moriarty, Dr. John Watson resumes his medical career as the head of a clinic dedicated to treating rare disorders. However, he soon finds that his old life is not done with him yet.</p>
+              <p><strong>Seasons:</strong> 1</p>
+              <p><strong>Genre:</strong> Mystery</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="popular-item">
+            <img src="images/911.jpg" alt="911" class="movie-image">
+            <div class="movie-info">
+              <h3>911</h3>
+              <p>Explore the experiences of police officers, paramedics and firefighters who are thrust into the most frightening and heart-stopping situations. These emergency responders must try to balance saving those who are most vulnerable with solving the problems in their own lives.</p>
+              <p><strong>Seasons:</strong> 8</p>
+              <p><strong>Genre:</strong> Drama</p>
+              <p><strong>Year:</strong> 2018</p>
+            </div>
+          </div>
+          <div class="popular-item">
+            <img src="images/mobland.jpg" alt="MobLand" class="movie-image">
+            <div class="movie-info">
+              <h3>MobLand</h3>
+              <p>Power is up for grabs as two warring crime families clash in a battle that threatens to topple empires. In the crossfire stands Harry Da Souza, a street-smart 'fixer' who knows too well where loyalties lie when opposing forces collide.</p>
+              <p><strong>Seasons:</strong> 1</p>
+              <p><strong>Genre:</strong> Drama</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="popular-item">
+            <img src="images/godfatherofharlem.jpg" alt="Godfather Of Harlem" class="movie-image">
+            <div class="movie-info">
+              <h3>Godfather Of Harlem</h3>
+              <p>A gangster named Bumpy Johnson makes his way in Harlem during the 1960s. A TV prequel to the 2007 film, 'American Gangster', which centered on the criminal enterprise of Frank Lucas.</p>
+              <p><strong>Seasons:</strong> 4</p>
+              <p><strong>Genre:</strong> Drama</p>
+              <p><strong>Year:</strong> 2019</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="new-release-section">
+        <h2>New releases <a class="view-all" href="movies.html">view all</a></h2>
+        <div class="new-release-carousel">
+          <div class="new-release-item">
+            <img src="images/sharpcorner.jpg" alt="Sharp Corner" class="movie-image">
+            <div class="movie-info">
+              <h3>Sharp Corner</h3>
+              <p>A dedicated family man becomes obsessed with saving the lives of the car accident victims on the sharp corner in front of his house – an obsession that could cost him everything.</p>
+              <p><strong>Duration:</strong> 1h 50m</p>
+              <p><strong>Genre:</strong> Thriller, Comedy</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="new-release-item">
+            <img src="images/finaldestinationbloodlines.jpg" alt="Final Destination Bloodlines" class="movie-image">
+            <div class="movie-info">
+              <h3>Final Destination Bloodlines</h3>
+              <p>Plagued by a violent recurring nightmare, college student Stefanie heads home to track down the one person who might be able to break the cycle and save her family from the grisly demise that inevitably awaits them all.</p>
+              <p><strong>Duration:</strong> 1h 49m</p>
+              <p><strong>Genre:</strong> Horror</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="new-release-item">
+            <img src="images/aminecraftmovie.jpg" alt="A Minecraft Movie" class="movie-image">
+            <div class="movie-info">
+              <h3>A Minecraft Movie</h3>
+              <p>Our misfits are suddenly pulled through a mysterious portal into a bizarre cubic wonderland that thrives on imagination. To get back home they'll have to master this world while embarking on a quest with an unexpected expert crafter.</p>
+              <p><strong>Duration:</strong> 1h 41m</p>
+              <p><strong>Genre:</strong> Family, Comedy</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="new-release-item">
+            <img src="images/theballadofwallisisland.jpg" alt="The Ballad Of Wallis Island" class="movie-image">
+            <div class="movie-info">
+              <h3>The Ballad Of Wallis Island</h3>
+              <p>An eccentric lottery winner who lives alone on a remote island tries to make his fantasies come true by getting his favorite musicians to perform at his home.</p>
+              <p><strong>Duration:</strong> 1h 40m</p>
+              <p><strong>Genre:</strong> Comedy</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="new-release-item">
+            <img src="images/thunderbolts.jpg" alt="Thunderbolts" class="movie-image">
+            <div class="movie-info">
+              <h3>Thunderbolts*</h3>
+              <p>After finding themselves ensnared in a death trap, seven disillusioned castoffs must embark on a dangerous mission that will force them to confront the darkest corners of their pasts.</p>
+              <p><strong>Duration:</strong> 2h 6m</p>
+              <p><strong>Genre:</strong> Action, Adventure</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="new-release-item">
+            <img src="images/rust.jpg" alt="Rust" class="movie-image">
+            <div class="movie-info">
+              <h3>Rust</h3>
+              <p>A boy left to fend for himself and his younger brother following their parents' deaths in 1880s Wyoming goes on the run with his long-estranged grandfather after he is sentenced to hang for the accidental killing of a local rancher.</p>
+              <p><strong>Duration:</strong> 2h 19m</p>
+              <p><strong>Genre:</strong> Western</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="new-release-item">
+            <img src="images/salvable.jpg" alt="Salvable" class="movie-image">
+            <div class="movie-info">
+              <h3>Salvable</h3>
+              <p>When a battered boxer past his prime finds his dreams and his relationships on the ropes, he falls back in with a dangerous crowd and has to take the biggest swing of his life to reclaim his hope and his family.</p>
+              <p><strong>Duration:</strong> 1h 41m</p>
+              <p><strong>Genre:</strong> Drama, Crime</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="new-release-item">
+            <img src="images/blackkbag.jpg" alt="Black Bag" class="movie-image">
+            <div class="movie-info">
+              <h3>Black Bag</h3>
+              <p>When his beloved wife is suspected of betraying the nation, an intelligence agent faces the ultimate test – loyalty to his marriage or his country.</p>
+              <p><strong>Duration:</strong> 1h 33m</p>
+              <p><strong>Genre:</strong> Thriller</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+          <div class="new-release-item">
+            <img src="images/gunslingers.jpg" alt="Gunslingers" class="movie-image">
+            <div class="movie-info">
+              <h3>Gunslingers</h3>
+              <p>In a town named redemption, reformed gunslinger Keller and mad genius Ben are guided by spiritual leader Jericho towards vindication. While confronting their violent histories, their newfound peace is challenged by violence and revenge.</p>
+              <p><strong>Duration:</strong> 1h 44m</p>
+              <p><strong>Genre:</strong> Western</p>
+              <p><strong>Year:</strong> 2025</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+</main>
+<script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+  
+    function showSlides() {
+      slides.forEach(slide => slide.classList.remove("active"));
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add("active");
+    }
+  
+    // Initial show
+    slides[slideIndex].classList.add("active");
+  
+    // Change slide every 5 seconds
+    setInterval(showSlides, 5000);
+  </script>
+
+  <script>
+    // Show movie info on hover for trending movies
+    document.querySelectorAll('.trending-item').forEach(item => {
+      const movieInfo = item.querySelector('.movie-info');
+      if (movieInfo) {
+        movieInfo.style.display = 'none'; // Hide initially
+        item.addEventListener('mouseenter', () => {
+          movieInfo.style.display = 'block';
+        });
+        item.addEventListener('mouseleave', () => {
+          movieInfo.style.display = 'none';
+        });
+      }
+    });
+  </script>
+  
+<footer>
+
+</footer>
+</body>
+</html>

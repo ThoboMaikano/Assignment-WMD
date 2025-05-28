@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movies</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="media/logo1.png" alt="Logo" />
+      <span class="logo-text">Screen sync</span>
+    </div>
+    <div class="nav-toggle" id="nav-toggle">&#9776;</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="movies.html">Movies</a></li>
+      <li><a href="series.html">Series</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="signin.html">SignIn</a></li>
+    </ul>
+  </nav>
+  
+  <script>
+    document.getElementById("nav-toggle").onclick = function () {
+      document.getElementById("nav-links").classList.toggle("active");
+    };
+  </script>
+<main>
+  <section class="filter-section">
+    <h2>Filter Movies</h2>
+    <form class="filters">
+      <div class="filter-group">
+        <label for="genre">Genre:</label>
+        <select id="genre" name="genre">
+          <option value="">All</option>
+          <option value="action">Action</option>
+          <option value="adventure">Adventure</option>
+          <option value="comedy">Comedy</option>
+          <option value="horror">Horror</option>
+          <option value="sci-fi">Sci-Fi</option>
+          <option value="romance">Romance</option>
+          <!-- Add more genres as needed -->
+        </select>
+      </div>
+      
+      <div class="filter-group">
+        <label for="year">Year:</label>
+        <select id="year" name="year">
+          <option value="">All</option>
+          <option value="2025">2025</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <!-- Add more years -->
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="search">Search Title</label>
+        <input type="text" id="search" placeholder="Enter movie title..."/>
+      </div>
+    </form>
+  </section>
+
+  <section class="movie-grid-section">
+    <div class="movie-grid" id="movieGrid">
+
+      <!-- Sample movie card -->
+
+      <div class="movie-card" data-genre="action" data-year="2025">
+        <img src="images/g20action.jpg" alt="G20">
+        <h3>G20</h3>
+        <p>Action | 2025</p>
+        <button class="btn" onclick='viewMovieDetails({
+          id: 1,
+          title: "G20",
+          genres: ["Action"],
+          year: 2025,
+          description: "After the G20 Summit is overtaken by terrorists, President Danielle Sutton must bring all her statecraft and military experience to defend her family and her fellow leaders.",
+          image: "images/g20action.jpg",
+          videoUrl: "https://www.youtube.com/embed/ZL7R8qyQXrc",
+          director: "Patricia Riggen",
+          cast: "Viola Davis, Anthony Anderson, Ramón Rodríguez, Marsai Martin, Antony Starr, Douglas Hodge, Elizabeth Marvel, Christopher Farrar, Sabrina Impacciatore, MeeWha Alana Lee, John Hoogenakker, Conrad Kemp",
+          duration: "1hr 48min",
+        })'>View Details</button>
+        
+      </div>
+
+      <div class="movie-card" data-genre="comedy" data-year="2025">
+        <img src="images/theballadofwallisisland.jpg" alt="The Ballad of Wallis Island">
+        <h3>The Ballad Of Wallis Island</h3>
+        <p>Comedy | 2025</p>
+        <button class="btn" onclick='viewMovieDetails({
+          id: 1,
+          title: "The Ballad Of Wallis Island",
+          genres: ["Comedy"],
+          year: 2025,
+          description: "An eccentric lottery winner who lives alone on a remote island tries to make his fantasies come true by getting his favorite musicians to perform at his home.",
+          image: "images/theballadofwallisisland.jpg",
+          videoUrl: "https://www.youtube.com/embed/T9smxlnKNz0",
+          director: "James Griffiths",
+          cast: "Carey Mulligan, Tom Basden, Tim Key, Sian Clifford, Akemnji Ndifornyen, Steve Marsh, Luka Downie, Kerrie Thomason, Arron Long",
+          duration: "1hr 40min",
+        })'>View Details</button>
+      </div>
+
+      <div class="movie-card" href="movie-details.html" data-genre="adventure" data-year="2025">
+        <img src="images/theelectricstate.jpg" alt="The Electric State">
+        <h3>The Electric State</h3>
+        <p>Adventure | 2025</p>
+        <button class="btn" onclick='viewMovieDetails({
+          id: 1,
+          title: "The Electric State",
+          genres: ["Adventure"],
+          year: 2025,
+          description: "An orphaned teen hits the road with a mysterious robot to find her long-lost brother, teaming up with a smuggler and his wisecracking sidekick.",
+          image: "images/theelectricstate.jpg",
+          videoUrl: "https://www.youtube.com/embed/QIw6ITiwgBU",
+          director: "Joe Russo",
+          cast: "Millie Bobby Brown, Chris Pratt, Woody Harrelson, Ke Huy Quan, Giancarlo Esposito, Stanley Tucci, Anthony Mackie, Brian Cox, Jenny Slate, Woody Norman, Katelin Chesna, Adam Croasdell",
+          duration: "2hr 8min",
+        })'>View Details</button>
+      </div>
+
+      <div class="movie-card" data-genre="horror" data-year="2023">
+        <img src="images/thenun2.jpg" alt="The Nun II">
+        <h3>The Nun II</h3>
+        <p>Horror | 2023</p>
+         <button class="btn" onclick='viewMovieDetails({
+          id: 1,
+          title: "The Nun II",
+          genres: ["Horror"],
+          year: 2023,
+          description: "1956 - France. A priest is murdered. An evil is spreading. The sequel to the worldwide smash hit follows Sister Irene as she once again comes face-to-face with Valak, the demon nun.",
+          image: "images/thenun2.jpg",
+          videoUrl: "https://www.youtube.com/embed/QF-oyCwaArU",
+          director: "Michael Chaves",
+          cast: "Taissa Farmiga, Jonas Bloquet, Storm Reid, Anna Popplewell, Bonnie Aarons, Katelyn Rose Downey, Suzanne Bertish, Léontine dOncieu, Anouk Darwin Homewood, Peter Hudson, Tamar Baruch, Natalia Safran, Maxime Elias-Menet, Pascal Aubert, Alexandra Gentil, Florence Mestais, Margaux Borel, Viviana Moin",
+          duration: "1hr 50min",
+        })'>View Details</button>
+      </div>
+
+      <div class="movie-card" data-genre="sci-fi" data-year="2025">
+        <img src="images/warden.jpg" alt="Warden">
+        <h3>Warden</h3>
+        <p>Sci-Fi | 2025</p>
+        <button class="btn" onclick='viewMovieDetails({
+          id: 1,
+          title: "Warden",
+          genres: ["Sci-Fi"],
+          year: 2025,
+          description: "A docu-style science fiction thriller exploring the real-world impact of a young man discovering his superpowers. It delves into how his presence influences society, attracting followers, sparking conflict, and changing the lives of everyone around him.",
+          image: "images/warden.jpg",
+          videoUrl: "https://www.youtube.com/embed/fsdO16A70Us",
+          director: "Marcus Alqueres",
+          cast: "Giovanni De Lorenzi, Alli Willow, James Turpin, Antonio Saboia, Bukassa Kabengele, Nathalia Florentino, Brian Townes",
+          duration: "1hr 30min",
+        })'>View Details</button>
+      </div>
+
+      <div class="movie-card" data-genre="comedy" data-year="2024">
+        <img src="images/adultbestfriends.jpg" alt="Adult Best Friends">
+        <h3>Adult Best Friends</h3>
+        <p>Comedy | 2024</p>
+        <button class="btn" onclick='viewMovieDetails({
+          id: 1,
+          title: "Adult Best Friends",
+          genres: ["Comedy"],
+          year: 2024,
+          description: "Inseparable since childhood, levelheaded Katie takes her codependent best friend Delaney on a girls’ trip to break the news that she is getting married. Things do not go as planned.",
+          image: "images/adultbestfriends.jpg",
+          videoUrl: "https://www.youtube.com/embed/-t3R9WxH1I8",
+          director: "Maria Nikolova",
+          cast: "Katie Corwin, Delaney Buffett, Zachary Quinto, Cazzie David, Mason Gooding, Casey Wilson, Owen Thiele, Benjamin Norris, Alexander Hodge, Carmen Christopher, Miki Ishikawa, Heather Mazur",
+          duration: "1hr 30min",
+        })'>View Details</button>
+      </div>
+
+      <div class="movie-card" data-genre="action" data-year="2023">
+        <img src="images/blacklotus2023.jpg" alt="Black Lotus">
+        <h3>Black Lotus</h3>
+        <p>Action | 2023</p>
+        <button class="btn" onclick='viewMovieDetails({
+          id: 1,
+          title: "Black Lotus",
+          genres: ["Action"],
+          year: 2023,
+          description: "An ex-special forces operative wages a one man war through the streets of Amsterdam to rescue his friends daughter from the local crime syndicate.",
+          image: "images/blacklotus2023.jpg",
+          videoUrl: "https://www.youtube.com/embed/7mWuQWtcU1k",
+          director: "Todor Chapkanov",
+          cast: "Rico Verhoeven, Frank Grillo, Peter Franzén, Roland Møller, Magnus Samuelsson, Rona-Lee Shimon, Kevin Janssens, Marie Dompnier, Simon Wan, Hristo Petkov, Edon Rizvanolli, Pippi Casey",
+          duration: "1hr 30min",
+        })'>View Details</button>
+      </div>
+
+      <div class="movie-card" data-genre="romance" data-year="2023">
+        <img src="images/redwhiteandroyalbluecomedy.jpg" alt="Red White And Royal Blue">
+        <h3>Red White And Royal Blue</h3>
+        <p>Romance | 2023</p>
+        <button class="btn" onclick='viewMovieDetails({
+          id: 1,
+          title: "Red White And Royal Blue",
+          genres: ["Romance"],
+          year: 2023,
+          description: "When the feud between the son of the American President and Britains prince threatens to drive a wedge in U.S. British relations, the two are forced into a staged truce that sparks something deeper.",
+          image: "images/redwhiteandroyalbluecomedy.jpg",
+          videoUrl: "https://www.youtube.com/embed/pt56IC8gDZ4",
+          director: "Matthew López",
+          cast: "Jemma Redgrave, Thomas Flynn, Bridget Benstead, Nicholas Galitzine, Ellie Bamber, Taylor Zakhar Perez, Rachel Hilson, Michael Ayala-Cole, Uma Thurman, Sarah Shahi, Annabella King, Sharon D. Clarke, Aneesh Sheth, Akshay Khanna, Miranda Heldt, Rita Estevanovich, Kaya Brown-Hallam, Brian Naylor",
+          duration: "1hr 58min",
+        })'>View Details</button>
+      </div>
+
+      <div class="movie-card" data-genre="romance" data-year="2021">
+        <img src="images/littlefish.jpg" alt="Little Fish">
+        <h3>Little Fish</h3>
+        <p>Romance | 2021</p>
+        <button class="btn" onclick='viewMovieDetails({
+          id: 1,
+          title: "Little Fish",
+          genres: ["Romance"],
+          year: 2021,
+          description: "A couple fights to hold their relationship together as a memory loss virus spreads and threatens to erase the history of their love and courtship.",
+          image: "images/littlefish.jpg",
+          videoUrl: "https://www.youtube.com/embed/knPhaXYG4YA",
+          director: "Chad Hartigan",
+          cast: "Olivia Cooke, Jack OConnell, Soko, Raúl Castillo, David Lennon, Mackenzie Cardwell, Ross Wirtanen, Heather Decksheimer, Natalie Smith, Ron Robinson, Wyatt Cameron, Morgana Wyllie",
+          duration: "1hr 41min",
+        })'>View Details</button>
+      </div>
+
+      <div class="movie-card" data-genre="horror" data-year="2022">
+        <img src="images/lastradiocall.jpg" alt="Last Radio Call">
+        <h3>Last Radio Call</h3>
+        <p>Horror | 2022</p>
+        <button class="btn" onclick='viewMovieDetails({
+          id: 1,
+          title: "Last Radio Call",
+          genres: ["Horror"],
+          year: 2022,
+          description: "On June 30th, 2018, Officer David Serling went missing inside an undisclosed abandoned hospital. Using his recovered body cam footage, his wife attempts to piece together what happened to him on that horrible night.",
+          image: "images/lastradiocall.jpg",
+          videoUrl: "https://www.youtube.com/embed/tjCn9R9S2Qo",
+          director: "Isaac Rodriguez",
+          cast: "Sarah Froelich, Jason Scarbrough, Keekee Suki, Ali Alkhafaji, June Griffin Garcia, Bert Lopez",
+          duration: "1hr 16min",
+        })'>View Details</button>
+      </div>
+
+      <div class="movie-card" data-genre="sci-fi" data-year="2024">
+        <img src="images/madameweb.jpg" alt="Madame Web">
+        <h3>Madame Web</h3>
+        <p>Sci-Fi | 2024</p>
+        <button class="btn" onclick='viewMovieDetails({
+          id: 1,
+          title: "Madame Web",
+          genres: ["Sci-fi"],
+          year: 2024,
+          description: "Cassandra Webb is a New York metropolis paramedic who begins to demonstrate signs of clairvoyance. Forced to challenge revelations about her past, she needs to safeguard three young women from a deadly adversary who wants them destroyed.",
+          image: "images/madameweb.jpg",
+          videoUrl: "https://www.youtube.com/embed/s_76M4c4LTo",
+          director: "S.J Clarkson",
+          cast: "Dakota Johnson, Sydney Sweeney, Isabela Merced, Celeste OConnor, Tahar Rahim, Mike Epps, Emma Roberts, Adam Scott, Kerry Bishé, Zosia Mamet, José María Yazpik, Kathy-Ann Hart, Josh Drennen, Yuma Feldman, Miranda Adekoje, Deirdre McCourt, Naheem Garcia, Jill Hennessy",
+          duration: "1hr 56min",
+        })'>View Details</button>
+      </div>
+
+      <div class="movie-card" data-genre="comedy" data-year="2025">
+        <img src="images/oneofthemdays.jpg" alt="One Of Them Days">
+        <h3>One Of Them Days</h3>
+        <p>Comedy | 2025</p>
+        <button class="btn" onclick='viewMovieDetails({
+          id: 1,
+          title: "One Of Them Days",
+          genres: ["Comedy"],
+          year: 2025,
+          description: "Best friends and roommates Dreux and Alyssa are about to have One of Them Days. When they discover Alyssa’s boyfriend has blown their rent money, the duo finds themselves going to extremes in a comical race against the clock to avoid eviction and keep their friendship intact.",
+          image: "images/oneofthemdays.jpg",
+          videoUrl: "https://www.youtube.com/embed/-5xzjw_0d_0",
+          director: "Colin Flaherty",
+          cast: "Keke Palmer, SZA, Joshua David Neal, Vanessa Bell Calloway, Patrick Cage, Aziza Scott, Katt Williams, Maude Apatow, Gabrielle Dennis, Janelle James, Lil Rel Howery, Amin Joseph",
+          duration: "1hr 37min",
+        })'>View Details</button>
+      </div>
+      <!-- Add more cards as needed -->
+    </div>
+  </section>
+  
+</main>
+<script> const genreSelect = document.getElementById("genre"); const yearSelect = document.getElementById("year"); const searchInput = document.getElementById("search"); const movieCards = document.querySelectorAll(".movie-card"); function filterMovies() { const selectedGenre = genreSelect.value.toLowerCase(); const selectedYear = yearSelect.value; const searchQuery = searchInput.value.toLowerCase(); movieCards.forEach(card => { const cardGenre = card.getAttribute("data-genre").toLowerCase(); const cardYear = card.getAttribute("data-year"); const cardTitle = card.querySelector("h3").textContent.toLowerCase(); const genreMatch = !selectedGenre || cardGenre === selectedGenre; const yearMatch = !selectedYear || cardYear === selectedYear; const searchMatch = !searchQuery || cardTitle.includes(searchQuery); if (genreMatch && yearMatch && searchMatch) { card.style.display = "block"; } else { card.style.display = "none"; } }); } genreSelect.addEventListener("change", filterMovies); yearSelect.addEventListener("change", filterMovies); searchInput.addEventListener("input", filterMovies); 
+function viewMovieDetails(movie) {
+  // Save to localStorage
+  localStorage.setItem("selectedMovie", JSON.stringify(movie));
+  
+  // Redirect
+  window.location.href = "movie-details.html";
+}// ✅ add this line function viewMovieDetails(movie) { localStorage.setItem("selectedMovie", JSON.stringify(movie)); window.location.href = "movie-details.html"; } </script>
+</body>
+</html>
